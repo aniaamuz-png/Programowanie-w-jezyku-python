@@ -1,6 +1,7 @@
 def parzyste(list):
-    for i in list:
-        if i % 2 == 0:
-            print(i)
+    for numb in list:
+        if numb % 2 == 0:
+            print(numb)
 
-parzyste([1, 2, 3, 4, 5, 6, 7, 8])
+numbs = (range(10))
+parzyste(numbs)
