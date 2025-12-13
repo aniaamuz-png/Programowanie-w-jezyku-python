@@ -19,8 +19,8 @@ class Flat(Property):
     def __str__(self):
         return f'Flat is located on the {self.floor} floor'
 
-house = House(120, 5, 350000, "Main Street 10", 500)
-flat = Flat(60, 3, 220000, "Green Avenue 5/12", 3)
+house = House(120, 5, 350000, "ul. Bytomska 12, Warszawa", 500)
+flat = Flat(60, 3, 220000, "ul. Warszawska 21, Bytom", 3)
 
 print(house)
 print(flat)

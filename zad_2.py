@@ -41,50 +41,43 @@ class Order:
         return f'Book {self.books} shipped by {self.employee} to {self.student}'
 
 from datetime import date
-# === Biblioteki ===
+
 library1 = Library(
     city="Warszawa",
     street="Krakowskie Przedmieście 10",
     zip_code="00-001",
     open_hours="8:00-18:00",
-    phone="111222333"
-)
+    phone="123456789")
 
 library2 = Library(
     city="Kraków",
     street="Rynek Główny 1",
     zip_code="30-001",
     open_hours="9:00-17:00",
-    phone="444555666"
-)
+    phone="987654321")
 
-# === Pracownicy ===
 employee1 = Employee(
     "Jan", "Kowalski",
     date(2020, 5, 1),
     date(1990, 3, 15),
-    "Warszawa", "Mickiewicza 5", "01-234", "999888777"
-)
+    "Warszawa", "Mickiewicza 5", "01-234", "192837465")
 
 employee2 = Employee(
     "Anna", "Nowak",
     date(2019, 4, 10),
     date(1988, 7, 22),
-    "Kraków", "Długa 12", "30-002", "888777666"
-)
-# === Studenci ===
+    "Kraków", "Długa 12", "30-002", "918273645")
+
 student1 = "Maria Wiśniewska"
 student2 = "Tomasz Lewandowski"
 student3 = "Katarzyna Kaczmarek"
 
-# === Książki ===
-book1 = Book(library1, date(2010, 1, 1), "Adam", "Mickiewicz", 350)
-book2 = Book(library1, date(2015, 6, 10), "Henryk", "Sienkiewicz", 420)
-book3 = Book(library2, date(2005, 3, 20), "Bolesław", "Prus", 280)
+book1 = Book(library1, date(2010, 1, 1), "Jan", "Kowalski", 350)
+book2 = Book(library1, date(2015, 6, 10), "Piotr", "Nowak", 420)
+book3 = Book(library2, date(2005, 3, 20), "Czesław", "Miłosz", 280)
 book4 = Book(library2, date(2018, 9, 5), "Stanisław", "Lem", 310)
-book5 = Book(library1, date(2020, 12, 12), "Olga", "Tokarczuk", 290)
+book5 = Book(library1, date(2020, 12, 12), "Olga", "Mróz", 290)
 
-# === Zamówienia ===
 order1 = Order(
     employee=employee1,
     student=student1,
@@ -99,5 +92,4 @@ order2 = Order(
     order_date=date.today()
 )
 print(order1)
-print("\n" + "=" * 50 + "\n")
 print(order2)
