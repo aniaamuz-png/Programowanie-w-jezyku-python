@@ -19,7 +19,7 @@ class Employee:
         self.zip_code = zip_code
         self.phone = phone
     def __str__(self):
-        return f'Employee data {self.first_name}'
+        return f'Employee named {self.first_name}'
 
 class Book:
     def __init__(self, library: Library, publication_date, author_name: str, author_surname: str, number_of_pages):
