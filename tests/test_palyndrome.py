@@ -1,5 +1,6 @@
 from functions_for_testing import is_palindrome
 
+
 def test_kajak():
     assert is_palindrome("kajak") is True
 
