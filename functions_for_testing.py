@@ -27,3 +27,27 @@ def calculate_discount(price: float, discount: float) -> float:
     if not 0 <= discount <= 1:
         raise ValueError("Zniżka pomiędzy 0 a 1")
     return price * (1 - discount)
+
+
+def flatten_list(nested_list: list) -> list:
+    result = []
+    for item in nested_list:
+        if isinstance(item, list):
+            result.extend(flatten_list(item))
+        else:
+            result.append(item)
+    return result
+
+
+def is_prime(n: int) -> bool:
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+
+    for i in range(3, int(n ** 0.5) + 1, 2):
+        if n % i == 0:
+            return False
+    return True
